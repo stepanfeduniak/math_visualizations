@@ -1,0 +1,45 @@
+.panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition);
+}
+
+.tab:hover {
+  color: var(--text-primary);
+}
+
+.activeTab {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.chartArea {
+  padding: 1rem;
+}
+
+.empty {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}

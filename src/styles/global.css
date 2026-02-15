@@ -1,0 +1,132 @@
+/* ── Reset ────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── CSS Variables ────────────────────────────────── */
+:root {
+  --bg: #faf8f5;
+  --bg-card: #ffffff;
+  --text-primary: #1c1917;
+  --text-secondary: #78716c;
+  --accent: #0d9488;
+  --accent-light: rgba(13, 148, 136, 0.08);
+  --accent-hover: #0f766e;
+  --border: #e7e5e4;
+  --danger: #dc2626;
+  --warning: #d97706;
+
+  --chart-1: #0d9488;
+  --chart-2: #d97706;
+  --chart-3: #6366f1;
+  --chart-4: #e11d48;
+
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'IBM Plex Sans', -apple-system, sans-serif;
+
+  --radius: 8px;
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 2px 8px rgba(28, 25, 23, 0.06);
+  --transition: 150ms ease;
+}
+
+/* ── Base ─────────────────────────────────────────── */
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* ── Typography ───────────────────────────────────── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 { font-size: 1.75rem; }
+h2 { font-size: 1.375rem; }
+h3 { font-size: 1.125rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ── Utility ──────────────────────────────────────── */
+input[type="number"],
+input[type="text"] {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color var(--transition);
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+  border-color: var(--accent);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* ── Range slider ─────────────────────────────────── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* ── Button ───────────────────────────────────────── */
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
